@@ -45,7 +45,7 @@ The project architecture is as follow:
    
    c) docker push shahabshahab2/backbase_nginx:1
 
-the same for tomcat
+the same for tomcat.
 
 2) Kubernetes
    
@@ -79,7 +79,8 @@ To run the above app.
 1) First clone the repository. 
 2) Start the minikube cluster with command minikube start.
 3) Now for kubernetes first create namespace and the deployment and services. 
-    
+Run:
+
      $ kubectl apply -f deployment/namespace.yaml &&  kubectl apply -f deployment/
 
 Verify if namespace with name backbase is created by running kubectl get ns.
