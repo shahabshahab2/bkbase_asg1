@@ -79,6 +79,7 @@ To run the above app.
 1) First clone the repository. 
 2) Start the minikube cluster with command minikube start.
 3) Now for kubernetes first create namespace and the deployment and services. 
+
 Run:
 
      $ kubectl apply -f deployment/namespace.yaml &&  kubectl apply -f deployment/
