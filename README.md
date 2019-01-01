@@ -79,11 +79,18 @@ To run the above app.
 1) First clone the repository. 
 2) Start the minikube cluster with command minikube start.
 3) Now for kubernetes first create namespace and the deployment and services. 
-  
-   a) kubectl apply -f deployment/namespace.yaml &&  kubectl apply -f deployment/
-   Verify if namespace with name backbase is created by running kubectl get ns. 
-   Verify if deployment has been created by running kubectl get deploy -n backbase and has appropriate "Available" value.
-   Verify if service has been created by running kubectl get svc -n backbase.
+    
+     $ kubectl apply -f deployment/namespace.yaml &&  kubectl apply -f deployment/
+
+Verify if namespace with name backbase is created by running kubectl get ns.
+
+Verify if deployment has been created by running command below check "Available value"  for non-zero value.
+
+    $ kubectl get deploy -n backbase  
+
+Verify if service has been created by running 
+
+    $ kubectl get svc -n backbase.
  
    b) Now run your service. First check IP of your minikube (command : minikube ip) as we have used nodeport the service will run on IP of minikube 
    with port we forward in service i.e. 
