@@ -88,12 +88,14 @@ To run the above app.
    b) Now run your service. First check IP of your minikube (command : minikube ip) as we have used nodeport the service will run on IP of minikube 
    with port we forward in service i.e. 
 
-      for nginx:
+  for nginx:
+      
      $ kubectl expose deploy/nginx-deployment --type=NodePort --target-port=8080 -n backbase --name  "nginx-expose-service"
      $ minikube service nginx-expose-service -n backbase --url 
       http://192.168.99.100:30859
 
-      for tomcat:
+ for tomcat:
+      
      $ kubectl expose deploy/tomcat-deployment --type=NodePort --target-port=8090 -n backbase --name    "tomcat-expose-service"
      $ minikube service tomcat-expose-service -n backbase --url
        http://192.168.99.100:31449
